@@ -1,0 +1,188 @@
+@import 'globales';
+@import 'variables';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.6rem;
+    background-color: $light-grayish-blue;
+    padding: 2.5rem;
+    font-weight: normal;
+
+    @media (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+}
+
+.testimoniales {
+    @media (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 2rem;
+
+        .card {
+            margin-bottom: 0;
+
+            &__textimportant {
+                font-size: 2.4rem;
+            }
+        
+            &__lessimportant {
+                font-size: 1.4rem;
+            }
+        
+        .card__imgquote {
+            left: 66.8%;
+            top: -75%;
+            opacity: 70%;
+        }
+        }
+
+        .card.first {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .card.gray {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+
+        .card.white {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .card.white.second {
+            grid-column: 4 / 5;
+            grid-row: 1 / 3;
+        }
+
+        .card.dark-blue {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+    }
+}
+
+.card {
+    border-radius: .5rem;
+    padding: 2.3rem 3.2rem 3.2rem 3.2rem;
+    background-color: $moderate-violet;
+    min-width: 2.95rem;
+    margin-bottom: 2.4rem;
+
+    &__userinfo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+    }
+
+    .card__imagen {
+        border-radius: 50px;
+        border: 2px solid $less-violet;
+        max-width: 3.1rem;
+        margin-right: 1.3rem;
+    }
+
+    &__nombres {
+        font-size: 1.3rem;
+        color: $light-grayish-blue;
+        line-height: 1.3;
+
+        h3 {
+            font-size: 1.1rem;
+            opacity: 50%;
+        }
+    }
+
+    &__textimportant {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 1.6rem;
+        position: relative;
+    }
+
+    &__lessimportant {
+        color: $white;
+        text-align: left;
+        font-size: 1.22rem;
+        font-weight: 500;
+        line-height: 1.6;
+        opacity: 60%;
+    }
+
+.card__imgquote {
+    position: absolute;
+    left: 66.8%;
+    top: -45%;
+    // left: 16.6rem;
+    // top: -7rem;
+    opacity: 70%;
+}
+}
+
+.card.gray {
+    background-color: $dark-grayish-blue;
+
+    .card__imagen {
+        border: 2px solid $white;
+    }
+}
+
+.card.white {
+    background-color: $white;
+
+    .card__imagen {
+        border: 2px solid $white;
+    }
+
+    .card__nombres {
+        color: $dark-grayish-blue;
+    }
+
+    .card__textimportant {
+        color: $dark-grayish-blue;
+    }
+
+    .card__lessimportant {
+        color: $dark-grayish-blue;
+    }
+}
+
+.card.dark-blue {
+    background-color: $dark-blackish-blue;
+
+    .card__imagen {
+        border: 2px solid $moderate-violet;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        .card__imgquote {
+            left: 66.8%;
+            top: -133%;
+            opacity: 70%;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .card {
+        .card__imgquote {
+            left: 58.8%;
+            top: -38%;
+            opacity: 70%;
+        }
+    }
+}
